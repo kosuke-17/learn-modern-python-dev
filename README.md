@@ -62,6 +62,30 @@ RuffはAstralが提供するリンタ・フォーマッタ
 - カスタマイズするにはこのサイトを参照
   - https://docs.astral.sh/ruff/tutorial/#configuration
 
+### vscodeでリンタ・フォーマッタを動かす
+
+- vscodeの拡張機能である「Ruff」を入れると可視化してくれる
+- Cursorのグローバル設定でリンターを設定する
+  - path :`~/Library/Application Support/Cursor/User/settings.json`
+
+
+```json
+{
+    "[python]": { // Python用設定
+        "editor.formatOnSave": true, // ファイル保存時に自動でフォーマットする
+
+        "editor.codeActionsOnSave": { // ファイル保存時に
+            "source.fixAll": "explicit", // 問題を修正
+            "source.organizeImports": "explicit" // import文を整理
+        },
+        // PythonフォーマッターとしてRuffを使用
+        "editor.defaultFormatter": "charliermarsh.ruff" 
+    },
+}
+```
+
+- [参考](https://note.com/yunichee/n/nda29a9ecfe42)
+
 ### インストール
 ```bash
 uv add --dev ruff
