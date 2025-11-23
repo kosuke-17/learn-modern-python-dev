@@ -5,7 +5,13 @@ ruff, mypy
 
 ## 初期化
 
-```python
+```bash
 uv init
 ```
 
+
+## 仮想環境の構築済みでライブラリインストール
+
+```bash
+uv add <ライブラリ名>
+```
