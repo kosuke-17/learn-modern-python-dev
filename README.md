@@ -23,6 +23,10 @@ uv init
 uv add <ライブラリ名>
 ```
 
+```bash
+uv add --dev <ライブラリ名>
+```
+
 ## ファイル実行実行
 ```bash
 uv run xxx.py
@@ -48,5 +52,27 @@ uv python list
 
 ```bash
 uv python install 3.12.10
+```
+
+
+## Ruff
+
+RuffはAstralが提供するリンタ・フォーマッタ
+
+### インストール
+```bash
+uv add --dev ruff
+```
+
+### 検証’
+
+```bash
+uv run ruff check main.py
+```
+
+### --fixを指定することで、エラーを修正する
+
+```bash
+uv run ruff check --fix main.py
 ```
 
