@@ -33,3 +33,20 @@ uv run xxx.py
 ```bash
 uv run which python
 ```
+
+## uvを同期
+
+```bash
+uv sync
+```
+
+## Pythonのバージョンを管理
+
+```bash
+uv python list
+```
+
+```bash
+uv python install 3.12.10
+```
+
