@@ -143,3 +143,69 @@ uv run mypy .
 ### vscodeでpythonの型チェックをする
 
 - vscodeの拡張機能である「Mypy Type Checker」を入れると可視化してくれる
+
+## poethepoet(poe:ポウと言われることが多い): uv向きのタスクランナー
+
+- 毎回呼ぶのはめんどくさい
+
+```bash
+uv run ruff format .
+uv run ruff check --fix .
+uv run mypy .
+```
+
+### インストール
+
+```bash
+uv add --dev poethepoet
+```
+
+### 定義
+
+`pyproject.toml`に以下を記載
+```toml
+[tool.poe.tasks]
+format = "uv run ruff format ."
+lint = "uv run ruff check ."
+type-check = "uv run mypy ."
+
+check = ["format", "lint", "type-check"]
+```
+
+- 実行結果
+
+```terminal
+Poe => uv run ruff format .
+3 files left unchanged
+Poe => uv run ruff check .
+All checks passed!
+Poe => uv run mypy .
+Success: no issues found in 3 source files
+```
+
+## pre-commitのライブラリを用いて.gitのpre-commit時にアクションする
+
+```bash
+uv add --dev pre-commit
+```
+
+`.pre-commt-config.yaml`の作成
+
+```bash
+# 実行すると.git/hooks/pre-commitが自動生成される
+uv run pre-commit install
+```
+
+
+- 余談
+  - 以下のcursor設定をすると末尾を意識しなくて良い
+
+```
+Files: Insert Final Newline
+有効にすると、ファイルの保存時に改行を末尾に挿入します。
+```
+
+```
+ユーザー > ファイル > Excludeに.gitが非表示となる設定が自動でされている。
+そのため、「**/.git」の選択を削除する
+```

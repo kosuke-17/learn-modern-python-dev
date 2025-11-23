@@ -1,14 +1,15 @@
 def process_data(data, options={}):
-    target = data["value"]
+    print(data, options)
+    # target = data["value"]
 
-    if target == None:
-        return []
+    # if target == None:
+    #     return []
 
-    if options.get("verbose") == True:
-        print(f"Processing data: {target}")
+    # if options.get("verbose") == True:
+    #     print(f"Processing data: {target}")
 
-    result_list = ["apple", "banana", "orange", "grape", "peach", "melon"]
+    # result_list = ["apple", "banana", "orange", "grape", "peach", "melon"]
 
-    unused_var = 100
+    # unused_var = 100
 
-    x = 10
+    # x = 10
