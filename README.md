@@ -72,6 +72,8 @@ uv run ruff check main.py
 
 ### --fixを指定することで、エラーを修正する
 
+- 消せる修正はするが、消せないエラーもある。
+
 ```bash
 uv run ruff check --fix main.py
 ```

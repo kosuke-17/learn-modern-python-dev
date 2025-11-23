@@ -1,6 +1,3 @@
-from re import X
-import sys
-import os
 
 def process_data(  data, options = {}  ):
     target = data["value"]
