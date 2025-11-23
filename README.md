@@ -59,6 +59,9 @@ uv python install 3.12.10
 
 RuffはAstralが提供するリンタ・フォーマッタ
 
+- カスタマイズするにはこのサイトを参照
+  - https://docs.astral.sh/ruff/tutorial/#configuration
+
 ### インストール
 ```bash
 uv add --dev ruff
@@ -90,4 +93,15 @@ uv run ruff format main.py
 
 ```bash
 uv run ruff format .
+```
+
+## mypy: 静的型検査
+
+- pythonは動的型付け言語
+- プログラム中に型の整合性チェックを行う言語は静的型付け言語という
+- mypyはPythonで静的型付け言語風の型検査を行うツール
+  - 型ヒントを読み取る
+
+```bash
+uv add --dev mypy
 ```
