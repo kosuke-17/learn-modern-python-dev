@@ -8,5 +8,5 @@ def add_numbers(a: int, b: int) -> int:
 def greet(name: str) -> str:
     return f"Hello, {name}!"
 
-print(add_numbers("1", 2))
+print(add_numbers(1, 2))
 print(greet("John"))

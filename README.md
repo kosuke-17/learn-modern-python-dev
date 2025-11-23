@@ -109,3 +109,13 @@ uv add --dev mypy
 ```bash
 uv run mypy src/type_hint.py
 ```
+
+- すべてのpyファイルを検査
+
+```bash
+uv run mypy .
+```
+
+### vscodeでpythonの型チェックをする
+
+- vscodeの拡張機能である「Mypy Type Checker」を入れると可視化してくれる
