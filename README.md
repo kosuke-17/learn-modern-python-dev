@@ -105,3 +105,7 @@ uv run ruff format .
 ```bash
 uv add --dev mypy
 ```
+
+```bash
+uv run mypy src/type_hint.py
+```
