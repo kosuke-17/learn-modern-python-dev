@@ -1,5 +1,12 @@
 # learn-modern-python-dev
 
+## pipとの違い
+
+- インストール速度が速い
+- 依存関係の文書化が容易
+  - uvは`pyproject.toml`を確認する
+  - pipは`pip freeze > requirements.txt`などで依存関係を書き出す
+
 ## コードの品質管理
 ruff, mypy
 
@@ -14,4 +21,15 @@ uv init
 
 ```bash
 uv add <ライブラリ名>
+```
+
+## ファイル実行実行
+```bash
+uv run xxx.py
+```
+
+## uvが作成した実行環境でwhichする
+
+```bash
+uv run which python
 ```
