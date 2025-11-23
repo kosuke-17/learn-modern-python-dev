@@ -64,7 +64,7 @@ RuffはAstralが提供するリンタ・フォーマッタ
 uv add --dev ruff
 ```
 
-### 検証’
+### 検証
 
 ```bash
 uv run ruff check main.py
@@ -78,3 +78,16 @@ uv run ruff check main.py
 uv run ruff check --fix main.py
 ```
 
+
+
+### フォーマット
+
+```bash
+uv run ruff format main.py
+```
+
+- ドットの場合はファイル内の全体をフォーマットする
+
+```bash
+uv run ruff format .
+```
